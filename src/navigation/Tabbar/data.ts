@@ -5,6 +5,7 @@ const screens = [
   {
     name: Routes.HOME_STACK,
     component: HomeStack,
+    icon: 'home',
   },
 ];
 

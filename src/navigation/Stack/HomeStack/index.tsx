@@ -8,7 +8,12 @@ const HomeStack = () => {
   return (
     <Stack.Navigator>
       {screens.map(({name, component}, index) => (
-        <Stack.Screen key={index} name={name} component={component} />
+        <Stack.Screen
+          options={{title: 'Home Screen'}}
+          key={index}
+          name={name}
+          component={component}
+        />
       ))}
     </Stack.Navigator>
   );
