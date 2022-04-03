@@ -14,6 +14,7 @@ import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FontistoIcon from 'react-native-vector-icons/Fontisto';
+import {IconTypes} from '@/utils';
 
 const getIconType = (type: string) => {
   switch (type) {
