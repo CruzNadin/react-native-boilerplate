@@ -12,18 +12,26 @@ const shortcutStyles = {
   bg: 'backgroundColor',
   fs: 'fontSize',
   bw: 'borderWidth',
+  flex: 'flex',
   align: 'alignItems',
   justify: 'justifyContent',
   direction: 'flexDirection',
   color: 'color',
 } as any;
 
+const spacingData = ['mx', 'my', 'mt', 'mb', 'px', 'py', 'pl', 'pt'];
+
+function objectSearch(data: object, value: string) {
+  const colorsKey = Object.keys(data);
+  const key: any = colorsKey?.find((_data: string) => _data === value);
+  return data[key] ?? value;
+}
+
 function stylesConfig(type: string, value: string) {
   if (type === 'color') {
-    const colors = StyleConfig.theme.color;
-    const colorsKey = Object.keys(colors);
-    const key = colorsKey?.find((color: string) => color === value);
-    return colors[key] ?? value;
+    return objectSearch(StyleConfig.theme.color, value);
+  } else if (type === 'spacing') {
+    return objectSearch(StyleConfig.theme.spacing, value);
   }
   return;
 }
@@ -36,6 +44,8 @@ export const getStyleShortcuts = (props: any) => {
   _props.forEach((prop: any) => {
     if (prop === 'bg' || prop === 'color') {
       styles[shortcutStyles[prop]] = stylesConfig('color', props[prop]);
+    } else if (spacingData.includes(prop)) {
+      styles[shortcutStyles[prop]] = stylesConfig('spacing', props[prop]);
     } else if (shortcutStyles[prop]) {
       styles[shortcutStyles[prop]] = props[prop];
     }

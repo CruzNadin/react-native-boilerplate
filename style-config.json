@@ -2,7 +2,8 @@
   "theme": {
     "color": {
       "white": "#fff",
-      "red": "gray"
+      "red": "#FF0000",
+      "black": "#000"
     },
     "spacing": {
       "small": 10,
