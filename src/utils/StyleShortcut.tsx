@@ -10,6 +10,8 @@ const shortcutStyles = {
   py: 'paddingVertical',
   pl: 'paddingLeft',
   pt: 'paddingTop',
+  pr: 'paddingRight',
+  pb: 'paddingBottom',
 
   /* Backgrounds */
   bg: 'backgroundColor',
@@ -19,10 +21,15 @@ const shortcutStyles = {
   align: 'alignItems',
   justify: 'justifyContent',
   direction: 'flexDirection',
+  wrap: 'flexWrap',
 
   /* Typography */
   fs: 'fontSize',
-  color: 'color',
+  fw: 'fontWeight',
+  fc: 'color',
+  lh: 'lineHeight',
+  ls: 'letterSpacing',
+  tc: 'textAlign',
 
   /* Borders */
   bw: 'borderWidth',
@@ -31,11 +38,27 @@ const shortcutStyles = {
   brw: 'borderRightWidth',
   blw: 'borderLeftWidth',
   br: 'borderRadius',
+  bs: 'borderStyle',
   bc: 'borderColor',
+  btwc: 'borderTopColor',
+  bbwc: 'borderBottomColor',
+  brc: 'borderRightColor',
+  blc: 'borderLeftColor',
 } as any;
 
-const spacingData = ['mx', 'my', 'mt', 'mb', 'px', 'py', 'pl', 'pt'];
-const colorData = ['bg', 'color', 'bc'];
+const spacingData = [
+  'mx',
+  'my',
+  'mt',
+  'mb',
+  'px',
+  'py',
+  'pl',
+  'pt',
+  'pr',
+  'pb',
+];
+const colorData = ['bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
 
 function objectSearch(data: object, value: string) {
   const colorsKey = Object.keys(data);
