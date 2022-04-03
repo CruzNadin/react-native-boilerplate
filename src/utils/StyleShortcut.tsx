@@ -1,6 +1,7 @@
 import StyleConfig from '../../style-config.json';
 
 const shortcutStyles = {
+  /* Spacing */
   mx: 'marginHorizontal',
   my: 'marginVertical',
   mt: 'marginTop',
@@ -9,17 +10,32 @@ const shortcutStyles = {
   py: 'paddingVertical',
   pl: 'paddingLeft',
   pt: 'paddingTop',
+
+  /* Backgrounds */
   bg: 'backgroundColor',
-  fs: 'fontSize',
-  bw: 'borderWidth',
+
+  /* Flexbox */
   flex: 'flex',
   align: 'alignItems',
   justify: 'justifyContent',
   direction: 'flexDirection',
+
+  /* Typography */
+  fs: 'fontSize',
   color: 'color',
+
+  /* Borders */
+  bw: 'borderWidth',
+  btw: 'borderTopWidth',
+  bbw: 'borderBottomWidth',
+  brw: 'borderRightWidth',
+  blw: 'borderLeftWidth',
+  br: 'borderRadius',
+  bc: 'borderColor',
 } as any;
 
 const spacingData = ['mx', 'my', 'mt', 'mb', 'px', 'py', 'pl', 'pt'];
+const colorData = ['bg', 'color', 'bc'];
 
 function objectSearch(data: object, value: string) {
   const colorsKey = Object.keys(data);
@@ -42,7 +58,7 @@ export const getStyleShortcuts = (props: any) => {
   const styles = {} as any;
 
   _props.forEach((prop: any) => {
-    if (prop === 'bg' || prop === 'color') {
+    if (colorData.includes(prop)) {
       styles[shortcutStyles[prop]] = stylesConfig('color', props[prop]);
     } else if (spacingData.includes(prop)) {
       styles[shortcutStyles[prop]] = stylesConfig('spacing', props[prop]);
