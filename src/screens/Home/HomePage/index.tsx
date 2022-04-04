@@ -11,7 +11,9 @@ const HomeScreen = () => {
         flexDirection="column"
         bw={1}
         bc="black">
-        <Text color="black">Hi Developer,</Text>
+        <Text color="black" fs="large">
+          Hi Developer,
+        </Text>
         <Text color="black">Style system spacing test</Text>
       </Block>
     </Block>
