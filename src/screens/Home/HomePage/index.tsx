@@ -5,7 +5,7 @@ const HomeScreen = () => {
   return (
     <Block flex={1}>
       <Block
-        flex
+        flex={1}
         align="center"
         justify="center"
         flexDirection="column"
