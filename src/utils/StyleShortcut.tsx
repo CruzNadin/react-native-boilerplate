@@ -1,4 +1,4 @@
-import StyleConfig from '../../styles-config.json';
+import StyleConfig from '../../style-config.json';
 
 const shortcutStyles = {
   /* Layout */
@@ -92,6 +92,8 @@ function stylesConfig(type: string, value: string) {
     return objectSearch(StyleConfig.theme.spacing, value);
   } else if (type === 'size') {
     return objectSearch(StyleConfig.theme.size, value);
+  } else if (type === 'typography') {
+    return objectSearch(StyleConfig.theme.font, value);
   }
   return;
 }
@@ -108,6 +110,8 @@ export const getStyleShortcuts = (props: any) => {
       styles[shortcutStyles[prop]] = stylesConfig('spacing', props[prop]);
     } else if (SizeData.includes(prop)) {
       styles[shortcutStyles[prop]] = stylesConfig('size', props[prop]);
+    } else if (prop === 'ff') {
+      styles[shortcutStyles[prop]] = stylesConfig('typography', props[prop]);
     } else if (shortcutStyles[prop]) {
       styles[shortcutStyles[prop]] = props[prop];
     }

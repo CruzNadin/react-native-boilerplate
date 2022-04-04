@@ -13,6 +13,7 @@
     "clean:ios": "cd ios && xcodebuild clean && cd ..",
     "start-reset-cache": "npm run start -- --reset-cache",
     "dev-clean": "rm -rf ~/Library/Developer/Xcode/DerivedData",
+    "link:font": "npx react-native link",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

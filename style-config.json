@@ -15,6 +15,10 @@
       "medium": 14,
       "large": 16,
       "full": "100%"
+    },
+    "font": {
+      "popins": "Poppins-Medium",
+      "popins-bold": "Poppins-Bold"
     }
   }
 }
