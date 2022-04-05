@@ -12,6 +12,8 @@ const shortcutStyles = {
   rt: 'right',
 
   /* Spacing */
+  p: 'padding',
+  m: 'margin',
   mx: 'marginHorizontal',
   my: 'marginVertical',
   mt: 'marginTop',
@@ -49,6 +51,7 @@ const shortcutStyles = {
   lh: 'lineHeight',
   ls: 'letterSpacing',
   tc: 'textAlign',
+  color: 'color',
 
   /* Borders */
   bw: 'borderWidth',
@@ -66,6 +69,8 @@ const shortcutStyles = {
 } as any;
 
 const spacingData = [
+  'p',
+  'm',
   'mx',
   'my',
   'mt',
@@ -78,8 +83,19 @@ const spacingData = [
   'pb',
 ];
 
-const colorData = ['bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
-const SizeData = ['fs', 'lh', 'ls', 'w', 'h', 'minW', 'maxW', 'minH', 'maxH'];
+const colorData = ['color', 'bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
+const SizeData = [
+  'fs',
+  'lh',
+  'ls',
+  'w',
+  'br',
+  'h',
+  'minW',
+  'maxW',
+  'minH',
+  'maxH',
+];
 
 function darkMode() {
   const scheme = useColorScheme();
