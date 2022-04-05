@@ -1,12 +1,24 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {useColorScheme} from 'react-native';
+
+import {
+  NavigationContainer,
+  DarkTheme,
+  DefaultTheme,
+} from '@react-navigation/native';
 import Navigation from '@/navigation';
+import {Provider} from 'react-redux';
+import {store} from '@/store';
 
 function App() {
+  const scheme = useColorScheme();
+
   return (
-    <NavigationContainer>
-      <Navigation />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Navigation />
+      </NavigationContainer>
+    </Provider>
   );
 }
 

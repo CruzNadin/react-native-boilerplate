@@ -7,6 +7,21 @@ const screens = [
     component: HomeStack,
     icon: 'home',
   },
+  {
+    name: Routes.HOME_STACK_ONE,
+    component: HomeStack,
+    icon: 'home',
+  },
+  {
+    name: Routes.HOME_STACK_TWO,
+    component: HomeStack,
+    icon: 'home',
+  },
+  {
+    name: Routes.HOME_STACK_THREE,
+    component: HomeStack,
+    icon: 'home',
+  },
 ];
 
 export default screens;

@@ -1,4 +1,5 @@
 import StyleConfig from '../../style-config.json';
+import {Appearance, useColorScheme} from 'react-native';
 
 const shortcutStyles = {
   /* Layout */
@@ -76,8 +77,19 @@ const spacingData = [
   'pr',
   'pb',
 ];
+
 const colorData = ['bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
 const SizeData = ['fs', 'lh', 'ls', 'w', 'h', 'minW', 'maxW', 'minH', 'maxH'];
+
+function darkMode() {
+  const scheme = useColorScheme();
+  if (scheme === 'light') {
+    return StyleConfig.theme.color.light;
+  } else if (scheme === 'dark') {
+    return StyleConfig.theme.color.dark;
+  }
+  return StyleConfig.theme.color.light;
+}
 
 function objectSearch(data: object, value: string) {
   const colorsKey = Object.keys(data);
@@ -87,7 +99,7 @@ function objectSearch(data: object, value: string) {
 
 function stylesConfig(type: string, value: string) {
   if (type === 'color') {
-    return objectSearch(StyleConfig.theme.color, value);
+    return objectSearch(darkMode(), value);
   } else if (type === 'spacing') {
     return objectSearch(StyleConfig.theme.spacing, value);
   } else if (type === 'size') {
