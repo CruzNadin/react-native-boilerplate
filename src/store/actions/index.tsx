@@ -1,3 +1,4 @@
 import settingsActions from './settingsActions';
+import userActions from './userActions';
 
-export {settingsActions};
+export {settingsActions, userActions};

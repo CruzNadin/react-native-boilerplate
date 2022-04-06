@@ -1,10 +1,10 @@
 import actionTypes from '@/store/actionTypes';
 
 const initialState = {
-  userProfile: [],
+  userProfile: null,
 };
 
-export const homeReducer = (state = initialState, action: any) => {
+export const userReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case actionTypes.USER_PROFILE:
       return {

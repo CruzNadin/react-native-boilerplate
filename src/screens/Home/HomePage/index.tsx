@@ -5,7 +5,7 @@ import {githubService} from '@/api';
 import {ScrollView} from 'react-native-gesture-handler';
 import {ProfileDto} from '@/models';
 import {GithubRepos} from '@/components/app';
-import {userProfile} from '@/store/actions/homeActions';
+import {userActions} from '@/store/actions';
 import {useTranslation} from 'react-i18next';
 import {TouchableOpacity} from 'react-native';
 import {onChangeLanguage} from '@/utils';
@@ -23,7 +23,7 @@ const HomeScreen = () => {
   const loadData = async () => {
     const response = await githubRequest.request<ProfileDto>();
     if (response.isSuccess) {
-      userProfile(response.data);
+      userActions.userProfile(response.data);
       setData(response.data);
     }
   };
