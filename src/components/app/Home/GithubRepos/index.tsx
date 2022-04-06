@@ -4,6 +4,16 @@ import {useApi} from '@/hooks';
 import {githubService} from '@/api';
 import {ReposDto} from '@/models';
 import {TouchableOpacity, Linking} from 'react-native';
+import {
+  Placeholder,
+  PlaceholderMedia,
+  PlaceholderLine,
+  Fade,
+  Loader,
+  Shine,
+  ShineOverlay,
+  Progressive,
+} from 'rn-placeholder';
 
 export const GithubRepos = () => {
   const githubRequest = useApi(githubService.getRepos);
@@ -23,20 +33,33 @@ export const GithubRepos = () => {
 
   return (
     <Block mt="large">
+      {githubRequest.loading && (
+        <Placeholder Animation={Progressive}>
+          {[...Array(10).keys()].map(el => (
+            <Block key={el} mb="small">
+              <PlaceholderLine height={80} noMargin />
+            </Block>
+          ))}
+        </Placeholder>
+      )}
       {data?.map((item: ReposDto, index: number) => (
         <TouchableOpacity
           key={index}
           onPress={() => Linking.openURL(item.html_url)}>
-          <Block bw={1} bc="gray" mb={10} p="small" br="medium">
-            <Text fc="white">{item.name}</Text>
-            <Text fc="white" pt={5}>
+          <Block bw={1} bc="border-color" mb={10} p="small" br="medium">
+            <Text fc="white" ff="popins">
+              {item.name}
+            </Text>
+            <Text fc="white" pt={5} ff="popins">
               {item.description}
             </Text>
             <Block mt="small" direction="row">
-              <Text fc="white">{item.language}</Text>
+              <Text fc="white" ff="popins">
+                {item.language}
+              </Text>
               <Block flex={1} direction="row" justify="flex-end" align="center">
                 <AppIcon name="star" color="white" />
-                <Text fc="white" pl={5}>
+                <Text fc="white" pl={5} ff="popins">
                   {item.stargazers_count}
                 </Text>
               </Block>

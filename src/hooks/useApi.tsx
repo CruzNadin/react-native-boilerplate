@@ -24,13 +24,14 @@ const useApi = (apiFunc: {
 
     //#region data handling
     setData(response.data);
-    setLoading(false);
+
     const result: ApiResult<T> = {
       isSuccess: response.status === 200 ? true : false,
       message: response.status === 200 ? 'success' : 'error',
       data: response.data,
     };
     StatusBar.setNetworkActivityIndicatorVisible(true);
+    setLoading(false);
     return result;
     //#endregion
   }

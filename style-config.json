@@ -6,14 +6,16 @@
         "text": "black",
         "white": "black",
         "danger": "#FF0000",
-        "black": "#000"
+        "black": "#000",
+        "border-color": "#30363d"
       },
       "dark": {
-        "mainBgColor": "#212529",
+        "mainBgColor": "#0e1117",
         "text": "#fff",
         "white": "#fff",
         "danger": "black",
-        "black": "#000"
+        "black": "#000",
+        "border-color": "#30363d"
       }
     },
     "spacing": {

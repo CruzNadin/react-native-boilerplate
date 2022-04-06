@@ -1,6 +1,8 @@
 import axios from '@/api/axios';
 
-const getProfile = async () => axios.get('users/CruzNadin');
-const getRepos = async () => axios.get('users/CruzNadin/repos');
+const GITHUB_USER = 'CruzNadin';
+
+const getProfile = async () => axios.get(`users/${GITHUB_USER}`);
+const getRepos = async () => axios.get(`users/${GITHUB_USER}/repos`);
 
 export default {getProfile, getRepos};

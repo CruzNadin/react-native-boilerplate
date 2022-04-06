@@ -1,4 +1,4 @@
-import {Block, Text} from '@/components/common';
+import {AppImage, Block, Text} from '@/components/common';
 import {useApi} from '@/hooks';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -29,6 +29,14 @@ const HomeScreen = () => {
     <Block flex={1} bg="mainBgColor">
       <ScrollView>
         <Block px="large" pt="small">
+          <Block align="flex-end">
+            <AppImage
+              url={data?.avatar_url}
+              size={60}
+              style={{borderRadius: 50}}
+            />
+          </Block>
+
           <Text fc="text" fs="large" ff="popins">
             Hi I'm {data?.name},
           </Text>
