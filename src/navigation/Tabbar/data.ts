@@ -8,7 +8,7 @@ const screens = [
     icon: 'home',
   },
   {
-    name: Routes.PROFILE_STACK,
+    name: Routes.PROFILE_SCREEN,
     component: ProfileStack,
     icon: 'person',
   },

@@ -5,7 +5,6 @@ import {useSelector} from 'react-redux';
 
 const ProfilePage = () => {
   const userReducer: any = useSelector((state: any) => state.homeReducer || {});
-  console.log('homeReducer', userReducer);
   return (
     <Block flex={1} bg="mainBgColor">
       <ScrollView>

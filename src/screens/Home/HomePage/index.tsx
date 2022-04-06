@@ -1,9 +1,7 @@
 import {AppImage, Block, Text} from '@/components/common';
 import {useApi} from '@/hooks';
 import React, {useEffect} from 'react';
-import {useSelector} from 'react-redux';
 import {githubService} from '@/api';
-import axios from 'axios';
 import {ScrollView} from 'react-native-gesture-handler';
 import {ProfileDto} from '@/models';
 import {GithubRepos} from '@/components/app';
