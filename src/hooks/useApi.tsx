@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {AxiosResponse} from 'axios';
 import ApiResult from '../api/api-result';
-import {Alert, StatusBar} from 'react-native';
+import {Alert, Platform, StatusBar} from 'react-native';
 
 const useApi = (apiFunc: {
   (...args: []): Promise<AxiosResponse<any>>;
@@ -14,7 +14,8 @@ const useApi = (apiFunc: {
   async function request<T>(...args: Array<ApiResult<T>>) {
     setLoading(true);
     const response = await apiFunc(args);
-    StatusBar.setNetworkActivityIndicatorVisible(false);
+    if (Platform.OS === 'ios')
+      StatusBar.setNetworkActivityIndicatorVisible(false);
     //#region error handling
     setError(response.status !== 200);
     if (response.status === 401) {
@@ -30,7 +31,8 @@ const useApi = (apiFunc: {
       message: response.status === 200 ? 'success' : 'error',
       data: response.data,
     };
-    StatusBar.setNetworkActivityIndicatorVisible(true);
+    if (Platform.OS === 'ios')
+      StatusBar.setNetworkActivityIndicatorVisible(true);
     setLoading(false);
     return result;
     //#endregion
