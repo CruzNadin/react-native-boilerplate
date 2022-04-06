@@ -10,11 +10,12 @@ import {useTranslation} from 'react-i18next';
 import {TouchableOpacity} from 'react-native';
 import {onChangeLanguage} from '@/utils';
 import {useSelector} from 'react-redux';
+import {RootState} from '@/store';
 
 const HomeScreen = () => {
   const {t} = useTranslation();
-  const settingsReducer = useSelector<any>(
-    state => state.settingsReducer || {},
+  const settingsReducer: any = useSelector(
+    (state: RootState) => state.settingsReducer || {},
   );
 
   const githubRequest = useApi(githubService.getProfile);
@@ -36,7 +37,7 @@ const HomeScreen = () => {
   return (
     <Block flex={1} bg="mainBgColor">
       <ScrollView>
-        <Block px="large" pt="small">
+        <Block px="medium" pt="small">
           <Block align="flex-end">
             <AppImage
               url={data?.avatar_url}
