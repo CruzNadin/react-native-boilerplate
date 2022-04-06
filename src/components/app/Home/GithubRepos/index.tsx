@@ -47,19 +47,19 @@ export const GithubRepos = () => {
           key={index}
           onPress={() => Linking.openURL(item.html_url)}>
           <Block bw={1} bc="border-color" mb={10} p="small" br="small">
-            <Text fc="white" ff="popins">
+            <Text fc="text-color-dark" ff="popins-bold">
               {item.name}
             </Text>
-            <Text fc="white" pt={5} ff="popins">
+            <Text fc="text-color" pt={5} ff="popins">
               {item.description}
             </Text>
             <Block mt="small" direction="row">
-              <Text fc="white" ff="popins">
+              <Text fc="text-color" ff="popins">
                 {item.language}
               </Text>
               <Block flex={1} direction="row" justify="flex-end" align="center">
-                <AppIcon name="star" color="white" />
-                <Text fc="white" pl={5} ff="popins">
+                <AppIcon name="star" color="text-color" />
+                <Text fc="text-color" pl={5} ff="popins">
                   {item.stargazers_count}
                 </Text>
               </Block>

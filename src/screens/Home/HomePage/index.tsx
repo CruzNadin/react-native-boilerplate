@@ -45,7 +45,7 @@ const HomeScreen = () => {
             />
           </Block>
 
-          <Text fc="text" fs="large" ff="popins">
+          <Text fc="white" fs="large" ff="popins">
             {t('hello')} {data?.name},
           </Text>
           <Block direction="row" mt="small">
