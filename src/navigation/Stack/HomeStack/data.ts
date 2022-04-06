@@ -5,6 +5,7 @@ const screens = [
   {
     name: Routes.HOME_SCREEN,
     component: HomeScreen,
+    title: 'home-screen',
   },
 ];
 

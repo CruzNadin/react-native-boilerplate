@@ -30,14 +30,20 @@ const ProfilePage = () => {
           </Text>
         </Block>
         <Block mt="small">
-          <Button
-            title="Portfolio"
-            onPress={() => Linking.openURL(userReducer?.userProfile?.blog)}
-          />
-          <Button
-            title="Github Profile"
-            onPress={() => Linking.openURL(userReducer?.userProfile?.html_url)}
-          />
+          {userReducer?.userProfile?.blog && (
+            <Button
+              title="Portfolio"
+              onPress={() => Linking.openURL(userReducer?.userProfile?.blog)}
+            />
+          )}
+          {userReducer?.userProfile?.html_url && (
+            <Button
+              title="Github Profile"
+              onPress={() =>
+                Linking.openURL(userReducer?.userProfile?.html_url)
+              }
+            />
+          )}
         </Block>
       </ScrollView>
     </Block>

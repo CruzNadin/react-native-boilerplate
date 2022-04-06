@@ -5,6 +5,7 @@ const screens = [
   {
     name: Routes.PROFILE_STACK,
     component: ProfilePage,
+    title: 'profile-screen',
   },
 ];
 

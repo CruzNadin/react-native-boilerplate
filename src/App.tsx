@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useColorScheme} from 'react-native';
-
 import {
   NavigationContainer,
   DarkTheme,
@@ -9,6 +8,7 @@ import {
 import Navigation from '@/navigation';
 import {Provider} from 'react-redux';
 import {store} from '@/store';
+import '@/utils/i18n';
 
 function App() {
   const scheme = useColorScheme();

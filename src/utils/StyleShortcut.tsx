@@ -51,6 +51,7 @@ const shortcutStyles = {
   lh: 'lineHeight',
   ls: 'letterSpacing',
   tc: 'textAlign',
+  dc: 'textDecorationLine',
   color: 'color',
 
   /* Borders */

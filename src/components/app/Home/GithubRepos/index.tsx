@@ -46,7 +46,7 @@ export const GithubRepos = () => {
         <TouchableOpacity
           key={index}
           onPress={() => Linking.openURL(item.html_url)}>
-          <Block bw={1} bc="border-color" mb={10} p="small" br="medium">
+          <Block bw={1} bc="border-color" mb={10} p="small" br="small">
             <Text fc="white" ff="popins">
               {item.name}
             </Text>
