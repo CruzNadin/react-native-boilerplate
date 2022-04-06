@@ -1,5 +1,5 @@
 const actionTypes = Object.freeze({
-  HEART_BEAT: 'HEART_BEAT',
+  USER_PROFILE: 'USER_PROFILE',
 });
 
 export default actionTypes;

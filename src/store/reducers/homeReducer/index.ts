@@ -1,15 +1,15 @@
 import actionTypes from '@/store/actionTypes';
 
 const initialState = {
-  heartBeat: true,
+  userProfile: [],
 };
 
 export const homeReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case actionTypes.HEART_BEAT:
+    case actionTypes.USER_PROFILE:
       return {
         ...state,
-        heartBeat: action.payload,
+        userProfile: action.payload,
       };
     default:
       return state;

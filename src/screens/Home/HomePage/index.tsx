@@ -7,15 +7,16 @@ import axios from 'axios';
 import {ScrollView} from 'react-native-gesture-handler';
 import {ProfileDto} from '@/models';
 import {GithubRepos} from '@/components/app';
+import {userProfile} from '@/store/actions/homeActions';
 
 const HomeScreen = () => {
-  const homeReducer: any = useSelector((state: any) => state.homeReducer || {});
   const githubRequest = useApi(githubService.getProfile);
   const [data, setData] = React.useState<ProfileDto>();
 
   const loadData = async () => {
     const response = await githubRequest.request<ProfileDto>();
     if (response.isSuccess) {
+      userProfile(response.data);
       setData(response.data);
     }
   };

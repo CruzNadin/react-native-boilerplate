@@ -1,3 +1,4 @@
 import HomeStack from './HomeStack';
+import ProfileStack from './ProfileStack';
 
-export {HomeStack};
+export {HomeStack, ProfileStack};

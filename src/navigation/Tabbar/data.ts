@@ -1,4 +1,4 @@
-import {HomeStack} from '@/navigation/Stack';
+import {HomeStack, ProfileStack} from '@/navigation/Stack';
 import Routes from '@/navigation/Routes';
 
 const screens = [
@@ -8,19 +8,9 @@ const screens = [
     icon: 'home',
   },
   {
-    name: Routes.HOME_STACK_ONE,
-    component: HomeStack,
-    icon: 'home',
-  },
-  {
-    name: Routes.HOME_STACK_TWO,
-    component: HomeStack,
-    icon: 'home',
-  },
-  {
-    name: Routes.HOME_STACK_THREE,
-    component: HomeStack,
-    icon: 'home',
+    name: Routes.PROFILE_STACK,
+    component: ProfileStack,
+    icon: 'person',
   },
 ];
 

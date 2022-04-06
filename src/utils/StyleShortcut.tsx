@@ -1,5 +1,5 @@
 import StyleConfig from '../../style-config.json';
-import {Appearance, useColorScheme} from 'react-native';
+import {useColorScheme} from 'react-native';
 
 const shortcutStyles = {
   /* Layout */
