@@ -8,23 +8,44 @@ import {
 import {Block} from '@/components/common';
 import {Placeholder, PlaceholderLine, Progressive} from 'rn-placeholder';
 
+type FlatListProps = {
+  data: any;
+  renderItem: (item: any) => any;
+  ListHeaderComponent?: any;
+  usePagination?: boolean;
+  keyExtractor?: (item: any) => string;
+  onRefresh?: () => void;
+  onEndReached?: () => void;
+  onEndReachedThreshold?: number;
+  refreshing?: boolean;
+  loading?: boolean;
+  preloader?: boolean;
+  preloaderLength?: number;
+  preloaderWidth?: number;
+  preloaderHeight?: number;
+  preloaderStyle?: object;
+  preloaderContainerStyle?: object;
+  horizontal?: boolean;
+};
+
 const FlatList = ({
-  data,
-  renderItem,
+  data = [],
+  renderItem = () => <></>,
   usePagination = false,
-  loading,
-  onEndReached,
-  refreshing,
-  onRefresh,
-  preloader,
-  preloaderLength,
-  preloaderWidth,
-  preloaderHeight,
+  ListHeaderComponent = <></>,
+  loading = false,
+  onEndReached = () => {},
+  refreshing = false,
+  onRefresh = () => {},
+  preloader = false,
+  preloaderLength = 10,
+  preloaderWidth = 10,
+  preloaderHeight = 80,
   preloaderStyle = {},
   preloaderContainerStyle = {},
   horizontal = false,
   ...props
-}: any) => {
+}: FlatListProps) => {
   const renderFooter = () => {
     if (!loading) {
       return null;
@@ -53,7 +74,7 @@ const FlatList = ({
 
   return preloader ? (
     <>
-      {props.ListHeaderComponent}
+      {ListHeaderComponent}
       {horizontal ? (
         <ScrollView horizontal style={[preloaderContainerStyle]}>
           <Placeholder Animation={Progressive}>
@@ -84,6 +105,7 @@ const FlatList = ({
     <FList
       data={data && data.length > 0 ? data : []}
       renderItem={renderItem}
+      ListHeaderComponent={ListHeaderComponent}
       ListFooterComponent={usePagination ? renderFooter : null}
       onEndReached={usePagination ? onEndReached : null}
       onEndReachedThreshold={0.8}
