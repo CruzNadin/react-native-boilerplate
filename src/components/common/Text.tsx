@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import {Text, TextStyle} from 'react-native';
 import {getStyleShortcuts} from '@/utils/StyleShortcut';
 
@@ -13,4 +13,4 @@ const IText: FC<Props | any> = ({children, ...props}) => {
   );
 };
 
-export default IText;
+export default memo(IText);

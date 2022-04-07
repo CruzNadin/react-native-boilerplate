@@ -22,7 +22,7 @@ export const GithubRepos = ({headerComponent = <></>}) => {
   }, []);
 
   return (
-    <Block mt="large">
+    <Block>
       <AppFlatList
         data={data}
         preloader={githubRequest.loading}

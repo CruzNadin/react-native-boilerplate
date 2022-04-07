@@ -25,9 +25,7 @@ const HomeScreen = () => {
 
   return (
     <Block flex={1} bg="mainBgColor">
-      <Block>
-        <GithubRepos headerComponent={<GitUser data={data} />} />
-      </Block>
+      <GithubRepos headerComponent={<GitUser data={data} />} />
     </Block>
   );
 };

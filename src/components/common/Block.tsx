@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import {View} from 'react-native';
 import {getStyleShortcuts} from '@/utils/StyleShortcut';
 
@@ -10,4 +10,4 @@ const Block: FC<Props | any> = ({children, ...props}) => {
   );
 };
 
-export default Block;
+export default memo(Block);

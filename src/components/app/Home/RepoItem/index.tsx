@@ -1,4 +1,4 @@
-import {AppIcon, Block, Text} from '@/components/common';
+import {AppButton, AppIcon, Block, Text} from '@/components/common';
 import {IconTypes} from '@/utils';
 import React from 'react';
 import {Linking, TouchableOpacity} from 'react-native';
@@ -6,7 +6,7 @@ import {Linking, TouchableOpacity} from 'react-native';
 export const RepoItem = ({item}: any) => {
   return (
     <Block px="small">
-      <TouchableOpacity onPress={() => Linking.openURL(item.html_url)}>
+      <AppButton onPress={() => Linking.openURL(item.html_url)}>
         <Block bw={1} bc="border-color" mb={10} p="small" br="small">
           <Text fc="text-color-dark" ff="popins-bold">
             {item.name}
@@ -41,7 +41,7 @@ export const RepoItem = ({item}: any) => {
             </Block>
           </Block>
         </Block>
-      </TouchableOpacity>
+      </AppButton>
     </Block>
   );
 };
