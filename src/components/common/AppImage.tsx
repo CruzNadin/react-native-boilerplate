@@ -3,7 +3,22 @@ import {createImageProgress} from 'react-native-image-progress';
 import FastImage from 'react-native-fast-image';
 const Image = createImageProgress(FastImage);
 
-const AppImage = ({url, size, width, height, style, ...otherProps}: any) => {
+type AppImageProps = {
+  url: string | any;
+  size?: number;
+  width?: number;
+  height?: number;
+  style?: any;
+};
+
+const AppImage = ({
+  url,
+  size,
+  width,
+  height,
+  style,
+  ...otherProps
+}: AppImageProps) => {
   return (
     <Image
       source={

@@ -50,6 +50,7 @@ const getIconType = (type: string) => {
       return FontistoIcon;
   }
 };
+
 export const AppIcon = ({
   name = '',
   type = IconTypes.fontAwesome,
