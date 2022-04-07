@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {useColorScheme} from 'react-native';
+import React from 'react';
+import {LogBox, useColorScheme} from 'react-native';
 import {
   NavigationContainer,
   DarkTheme,
@@ -12,6 +12,10 @@ import '@/utils/i18n';
 
 function App() {
   const scheme = useColorScheme();
+
+  /* unfortunately we are waiting for lottie update :( */
+  LogBox.ignoreLogs(['ViewPropTypes will be removed from React Native']);
+  /* unfortunately we are waiting for lottie update :( */
 
   return (
     <Provider store={store}>

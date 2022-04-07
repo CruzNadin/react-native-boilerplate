@@ -36,7 +36,7 @@ const FlatList = ({
   loading = false,
   onEndReached = () => {},
   refreshing = false,
-  onRefresh = () => {},
+  onRefresh,
   preloader = false,
   preloaderLength = 10,
   preloaderWidth,

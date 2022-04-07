@@ -10,6 +10,7 @@ const shortcutStyles = {
   bm: 'bottom',
   lt: 'left',
   rt: 'right',
+  z: 'zIndex',
 
   /* Spacing */
   p: 'padding',
