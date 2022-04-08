@@ -84,7 +84,6 @@ const spacingData = [
   'pr',
   'pb',
 ];
-
 const colorData = ['color', 'bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
 const SizeData = [
   'fs',

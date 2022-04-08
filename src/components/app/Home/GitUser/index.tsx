@@ -47,7 +47,7 @@ export const GitUser = ({data}: any) => {
       </Block>
 
       <Text fc="white" fs="large" ff="popins">
-        {t('hello')} {data?.name},
+        {t('hello', {name: data?.name})},
       </Text>
       <Block direction="row" mt="small">
         <TouchableOpacity onPress={() => onChangeLanguage('tr')}>

@@ -1,5 +1,5 @@
 {
-  "hello": "Hi I'm",
+  "hello": "Hi I'm {{name}}",
   "home-screen": "Home Page",
   "profile-screen": "Account"
 }
