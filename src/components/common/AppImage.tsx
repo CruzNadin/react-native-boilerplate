@@ -1,15 +1,8 @@
 import React, {memo} from 'react';
 import {createImageProgress} from 'react-native-image-progress';
 import FastImage from 'react-native-fast-image';
+import {ImageInterface, StyleInterface} from '@/interface';
 const Image = createImageProgress(FastImage);
-
-type AppImageProps = {
-  url: string | any;
-  size?: number;
-  width?: number;
-  height?: number;
-  style?: any;
-};
 
 const AppImage = ({
   url,
@@ -18,7 +11,7 @@ const AppImage = ({
   height,
   style,
   ...otherProps
-}: AppImageProps) => {
+}: ImageInterface | StyleInterface | any) => {
   return (
     <Image
       source={

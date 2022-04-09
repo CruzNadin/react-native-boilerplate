@@ -1,5 +1,6 @@
 import StyleConfig from '../../style-config.json';
 import {useColorScheme} from 'react-native';
+import {StyleInterface} from '@/interface';
 
 const shortcutStyles = {
   /* Layout */
@@ -19,6 +20,8 @@ const shortcutStyles = {
   my: 'marginVertical',
   mt: 'marginTop',
   mb: 'marginBottom',
+  ml: 'marginLeft',
+  mr: 'marginRight',
   px: 'paddingHorizontal',
   py: 'paddingVertical',
   pl: 'paddingLeft',
@@ -127,7 +130,7 @@ function stylesConfig(type: string, value: string) {
   return;
 }
 
-export const getStyleShortcuts = (props: any) => {
+export const getStyleShortcuts = (props: StyleInterface | any) => {
   const _props = Object.keys(props).filter(prop => Object.keys(shortcutStyles).includes(prop)) // prettier-ignore
 
   const styles = {} as any;

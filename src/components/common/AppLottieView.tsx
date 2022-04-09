@@ -1,14 +1,8 @@
 import React, {memo} from 'react';
 import LottieView from 'lottie-react-native';
 import {getStyleShortcuts} from '@/utils/StyleShortcut';
-
-type LottieViewProps = {
-  animation: string;
-  autoPlay?: boolean;
-  loop?: boolean;
-  style?: object;
-  color?: string;
-};
+import {StyleInterface} from '@/interface';
+import {LotieInterface} from '@/interface/ILottie';
 
 const AppLottieView = ({
   animation = '',
@@ -16,7 +10,7 @@ const AppLottieView = ({
   loop = true,
   style,
   ...props
-}: LottieViewProps) => {
+}: LotieInterface | StyleInterface | any) => {
   return (
     <LottieView
       source={animation}
