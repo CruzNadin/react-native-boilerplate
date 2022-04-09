@@ -10,7 +10,7 @@ import {RootState} from '@/store';
 import {onChangeLanguage} from '@/utils';
 import React from 'react';
 import {useTranslation} from 'react-i18next';
-import {Linking, TouchableOpacity} from 'react-native';
+import {Linking} from 'react-native';
 import {useSelector} from 'react-redux';
 
 export const GitUser = ({data}: any) => {
@@ -50,21 +50,21 @@ export const GitUser = ({data}: any) => {
         {t('hello', {name: data?.name})},
       </Text>
       <Block direction="row" mt="small">
-        <TouchableOpacity onPress={() => onChangeLanguage('tr')}>
+        <AppButton onPress={() => onChangeLanguage('tr')}>
           <Text
             fc="white"
             dc={settingsReducer?.language == 'tr' ? 'underline' : 'none'}>
             TR
           </Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => onChangeLanguage('en')}>
+        </AppButton>
+        <AppButton onPress={() => onChangeLanguage('en')}>
           <Text
             fc="white"
             pl="small"
             dc={settingsReducer?.language === 'en' ? 'underline' : 'none'}>
             EN
           </Text>
-        </TouchableOpacity>
+        </AppButton>
       </Block>
     </Block>
   );
