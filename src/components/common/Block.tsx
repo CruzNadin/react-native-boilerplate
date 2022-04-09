@@ -1,10 +1,9 @@
 import React, {FC, memo} from 'react';
 import {View} from 'react-native';
 import {getStyleShortcuts} from '@/utils/StyleShortcut';
+import {BlockInterface} from '@/interface';
 
-type Props = {};
-
-const Block: FC<Props | any> = ({children, ...props}) => {
+const Block: FC<BlockInterface | any> = ({children, ...props}) => {
   return (
     <View style={[getStyleShortcuts(props), props.style]}>{children}</View>
   );

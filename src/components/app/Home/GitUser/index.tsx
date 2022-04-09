@@ -5,6 +5,7 @@ import {
   AppButton,
   Text,
   AppLottieView,
+  AppIcon,
 } from '@/components/common';
 import {RootState} from '@/store';
 import {onChangeLanguage} from '@/utils';
