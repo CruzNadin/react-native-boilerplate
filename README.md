@@ -1,2 +1,2 @@
 # react-native-boilerplate
-react-native-boilerplate
+React Native Typescript Boilerplate
