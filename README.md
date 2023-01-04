@@ -1,2 +1,1 @@
-# react-native-boilerplate
-React Native Typescript Boilerplate
+# react-native-app-test
