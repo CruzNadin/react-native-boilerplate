@@ -1,16 +1,18 @@
-import React, {useEffect} from 'react';
-import {LogBox, useColorScheme} from 'react-native';
-import {
-  NavigationContainer,
-  DarkTheme,
-  DefaultTheme,
-} from '@react-navigation/native';
 import Navigation from '@/navigation';
-import {Provider} from 'react-redux';
 import {store} from '@/store';
 import '@/utils/i18n';
+import {
+  DarkTheme,
+  DefaultTheme,
+  NavigationContainer,
+} from '@react-navigation/native';
+import React, {useEffect} from 'react';
+import {LogBox, useColorScheme} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import {Provider} from 'react-redux';
 
+/* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
+ * LTI update could not be added via codemod */
 function App() {
   const scheme = useColorScheme();
 
