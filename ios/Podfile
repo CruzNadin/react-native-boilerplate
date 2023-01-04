@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'photo_editor' do
+target 'TsBoilerPlate' do
   config = use_native_modules!
   
   # Permissions
@@ -46,7 +46,7 @@ target 'photo_editor' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'photo_editorTests' do
+  target 'TsBoilerPlateTests' do
     inherit! :complete
     # Pods for testing
   end
