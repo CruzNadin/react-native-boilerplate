@@ -1,5 +1,5 @@
 {
-  "name": "TsBoilerPlate",
+  "name": "AwesomeProject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "clean:ios": "rm -fr ios/build && cd ios && xcodebuild clean && cd ..",
     "start-reset-cache": "npm run start -- --reset-cache",
     "dev-clean": "rm -rf ~/Library/Developer/Xcode/DerivedData",
-    "link:font": "npx react-native link",
+    "app:asset": "npx react-native-asset",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

@@ -4,7 +4,6 @@
 #include <fbjni/fbjni.h>
 #include <react/renderer/componentregistry/ComponentDescriptorProviderRegistry.h>
 #include <react/renderer/components/rncore/ComponentDescriptors.h>
-
 #include <rncli.h>
 
 namespace facebook {
