@@ -1,5 +1,5 @@
 {
-  "name": "@cn/react-native-boilerplate",
+  "name": "@cruznadin/react-native-boilerplate",
   "version": "1.0.0",
   "description": "React Native app template",
   "main": "post-init.script.js",
@@ -17,6 +17,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "cz",
     "prepare": "husky install"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react",
