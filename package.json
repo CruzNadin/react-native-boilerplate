@@ -1,13 +1,13 @@
 {
-  "name": "react-native-boilerplate",
+  "name": "@cn/react-native-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "React Native app template",
   "main": "post-init.script.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CruzNadin/react-native-boilerplate.git"
   },
-  "author": "",
+  "author": "CruzNadin - Kadir Barcın",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CruzNadin/react-native-boilerplate/issues"

@@ -1,5 +1,5 @@
 {
-  "name": "AwesomeProject",
+  "name": "boilerplate",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "app:name": "npx react-native-rename TsBoilerPlate -b com.example",
+    "app:name": "npx react-native-rename boilerplate -b com.boilerplate",
     "pod": "npx pod-install ios",
     "xcode": "cd ios && xed . && cd ..",
     "clean:android": "cd android && ./gradlew clean && cd ..",
