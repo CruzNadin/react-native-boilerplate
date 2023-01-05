@@ -1,11 +1,10 @@
 import {Animations} from '@/assets';
 import {
-  AppImage,
-  Block,
   AppButton,
-  Text,
+  AppImage,
   AppLottieView,
-  AppIcon,
+  Block,
+  Text,
 } from '@/components/common';
 import {RootState} from '@/store';
 import {onChangeLanguage} from '@/utils';
