@@ -1,6 +1,6 @@
 {
   "name": "@cruznadin/react-native-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native app template",
   "main": "post-init.script.js",
   "repository": {
