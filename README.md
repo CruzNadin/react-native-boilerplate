@@ -34,6 +34,6 @@ Assuming you have all the requirements installed, you can run the project by run
 
 ## 📫 Contact Us
 
-- Email - [contact@thekadir.com](mailto:contact@thekadir.com)
+- Email - [contact@kadirbarcin.net](mailto:contact@kadirbarcin.net)
 - LinkedIn - [Kadir Barcın](https://www.linkedin.com/in/kadir-barcin/)
 - Blog - [Blog](https://www.thekadir.com)
