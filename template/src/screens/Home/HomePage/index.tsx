@@ -1,10 +1,10 @@
+import {githubService} from '@/api';
+import {GithubRepos, GitUser} from '@/components/app';
 import {Block} from '@/components/common';
 import {useApi} from '@/hooks';
-import React, {useEffect} from 'react';
-import {githubService} from '@/api';
 import {ProfileDto} from '@/models';
-import {GithubRepos, GitUser} from '@/components/app';
 import {userActions} from '@/store/actions';
+import React, {useEffect} from 'react';
 
 const HomeScreen = () => {
   const githubRequest = useApi(githubService.getProfile);

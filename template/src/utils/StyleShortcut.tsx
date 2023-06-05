@@ -1,105 +1,12 @@
-import StyleConfig from '../../style-config.json';
+import {
+  SizeData,
+  StyleInterface,
+  colorData,
+  shortcutStyles,
+  spacingData,
+} from '@/interface';
 import {useColorScheme} from 'react-native';
-import {StyleInterface} from '@/interface';
-
-const shortcutStyles = {
-  /* Layout */
-  display: 'display',
-  overflow: 'overflow',
-  position: 'position',
-  tp: 'top',
-  bm: 'bottom',
-  lt: 'left',
-  rt: 'right',
-  z: 'zIndex',
-
-  /* Spacing */
-  p: 'padding',
-  m: 'margin',
-  mx: 'marginHorizontal',
-  my: 'marginVertical',
-  mt: 'marginTop',
-  mb: 'marginBottom',
-  ml: 'marginLeft',
-  mr: 'marginRight',
-  px: 'paddingHorizontal',
-  py: 'paddingVertical',
-  pl: 'paddingLeft',
-  pt: 'paddingTop',
-  pr: 'paddingRight',
-  pb: 'paddingBottom',
-
-  /* Sizing */
-  w: 'width',
-  h: 'height',
-  minW: 'minWidth',
-  maxW: 'maxWidth',
-  minH: 'minHeight',
-  maxH: 'maxHeight',
-
-  /* Backgrounds */
-  bg: 'backgroundColor',
-
-  /* Flexbox */
-  flex: 'flex',
-  align: 'alignItems',
-  justify: 'justifyContent',
-  direction: 'flexDirection',
-  wrap: 'flexWrap',
-
-  /* Typography */
-  fs: 'fontSize',
-  ff: 'fontFamily',
-  fw: 'fontWeight',
-  fc: 'color',
-  lh: 'lineHeight',
-  ls: 'letterSpacing',
-  tc: 'textAlign',
-  dc: 'textDecorationLine',
-  color: 'color',
-
-  /* Borders */
-  bw: 'borderWidth',
-  btw: 'borderTopWidth',
-  bbw: 'borderBottomWidth',
-  brw: 'borderRightWidth',
-  blw: 'borderLeftWidth',
-  br: 'borderRadius',
-  bs: 'borderStyle',
-  bc: 'borderColor',
-  btwc: 'borderTopColor',
-  bbwc: 'borderBottomColor',
-  brc: 'borderRightColor',
-  blc: 'borderLeftColor',
-} as any;
-
-const spacingData = [
-  'p',
-  'm',
-  'mx',
-  'my',
-  'mt',
-  'mb',
-  'px',
-  'py',
-  'pl',
-  'pt',
-  'pr',
-  'pb',
-];
-const colorData = ['color', 'bg', 'fc', 'bc', 'btwc', 'bbwc', 'brc', 'blc'];
-const SizeData = [
-  'fs',
-  'lh',
-  'ls',
-  'w',
-  'br',
-  'h',
-  'minW',
-  'maxW',
-  'minH',
-  'maxH',
-];
+import StyleConfig from '../../style-config.json';
 
 function darkMode() {
   const scheme = useColorScheme();
